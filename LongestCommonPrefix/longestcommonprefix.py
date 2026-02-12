@@ -8,6 +8,17 @@ for i in range(len(a[0])):
             print(s)
             exit()
     s+=a[0][i]"""
-s=input()
-if s==None:
-    print("")
+
+
+#Optimized code
+
+a=list(map(str,input().split()))
+
+res=""
+for i in range(len(a[0])):
+    for s in a:
+        if i==len(s) or s[i]!=a[0][i]:
+            print(res)
+            exit()
+    res+=a[0][i]
+print(res)
