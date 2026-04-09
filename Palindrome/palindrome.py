@@ -119,13 +119,59 @@
 #             print(a[i:j+1])
 
 
+# a=list(map(int,input().split()))
+# tg=int(input())
+
+# for i in range(len(a)):
+#     cs=0
+#     for j in range(i,len(a)):
+#         cs=cs+a[j]
+# #         if cs==tg:
+# #             print(a[i:j+1])
+
+# a=list(map(int,input().split()))
+# tg=int(input())
+# cs=0
+# s=0
+
+# for i in range(len(a)):
+#     cs=cs+a[i]
+
+#     while cs>tg:
+#         cs-=a[s]
+#         s+=1
+#     if cs==tg:
+#         print(a[s:i+1])
+
+
+# a=list(map(int,input().split()))
+# tg=int(input())
+
+# for i in range(len(a)):
+#     s=0
+#     for j in range(i,len(a)):
+#         s=s+a[j]
+#         print(s)
+
+# a=list(map(int,input().split()))
+# tg=int(input())
+# cs=0
+# s=0
+# m=0
+# for i in range(len(a)):
+#     cs=cs+a[i]
+#     while cs>tg:
+#         cs=cs-a[i]
+#         s+=1
+#     if cs==tg:
+#         m=max(m,i-s+1)
+# print(m)
+
 a=list(map(int,input().split()))
-tg=int(input())
+s=a[0]
+cs=a[0]
 
-for i in range(len(a)):
-    cs=0
-    for j in range(i,len(a)):
-        cs=cs+a[j]
-        if cs==tg:
-            print(a[i:j+1])
-
+for i in range(1,len(a)):
+    cs=max(a[i],cs+a[i])
+    s=max(s,cs)
+print(s)
